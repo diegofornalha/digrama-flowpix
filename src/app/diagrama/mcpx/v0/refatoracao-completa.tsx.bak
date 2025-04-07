@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import ActorNode from '../../../components/ActorNode';
@@ -50,11 +50,11 @@ type Edge = {
 
 const MCPXDiagramV0PageComplete = () => {
   // Estado para armazenar nós e arestas
-  const [nodes, setNodes] = useState<Node[]>([]);
-  const [edges, setEdges] = useState<Edge[]>([]);
-  const [reactFlowLoaded, setReactFlowLoaded] = useState(false);
+  const [nodes, setNodes] = React.useState<Node[]>([]);
+  const [edges, setEdges] = React.useState<Edge[]>([]);
+  const [reactFlowLoaded, setReactFlowLoaded] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Definir nós iniciais
     const initialNodes: Node[] = [
       { id: 'usuario', type: 'actor', data: { label: 'Usuário' }, position: { x: 0, y: 0 } },
