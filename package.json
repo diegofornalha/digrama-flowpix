@@ -1,0 +1,47 @@
+{
+  "name": "temp-next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --no-turbo",
+    "dev:debug": "NODE_OPTIONS='--inspect' next dev --no-turbo",
+    "clean": "rm -rf .next && rm -rf node_modules/.cache",
+    "dev:webpack": "NEXT_TURBO=0 next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.3",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.36.5",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@uiw/codemirror-extensions-langs": "^4.23.10",
+    "@uiw/codemirror-themes": "^4.23.10",
+    "@uiw/react-codemirror": "^4.23.10",
+    "d3": "^7.9.0",
+    "gojs": "^3.0.21",
+    "html-to-image": "^1.11.13",
+    "jquery": "^3.7.1",
+    "mermaid": "^11.6.0",
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "shadcn-ui": "^0.9.5",
+    "svg-pan-zoom": "^3.6.2",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/jquery": "^3.5.32",
+    "@types/jqueryui": "^1.12.24",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
