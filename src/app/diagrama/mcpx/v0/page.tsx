@@ -3,6 +3,15 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 
+// Adicionar declaração de JSX para elementos customizados
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
 const MCPXDiagramV0Page = () => {
   useEffect(() => {
     // Função para carregar scripts dinamicamente
@@ -427,7 +436,7 @@ const MCPXDiagramV0Page = () => {
               plumb.repaintEverything();
               
               // Redefinir z-index dos elementos
-              $container.find(".diagram .item").each(function() {
+              $container.find(".diagram .item").each(function(this: HTMLElement) {
                 if ($(this).attr('id') !== nodeId) {
                   $(this).css("z-index", 20);
                 }
@@ -451,7 +460,7 @@ const MCPXDiagramV0Page = () => {
         });
         
         // Adicionar evento click para trazer nó para frente
-        $container.find(".diagram .item").on('mousedown', function() {
+        $container.find(".diagram .item").on('mousedown', function(this: HTMLElement) {
           $(this).css("z-index", 30);
         });
       });

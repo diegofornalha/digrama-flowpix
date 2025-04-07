@@ -2,7 +2,9 @@
 const nextConfig = {
   // Desabilita explicitamente o Turbopack
   experimental: {
-    turbo: false
+    turbo: {
+      enabled: false
+    }
   },
   // Configurações adicionais
   reactStrictMode: true,
